@@ -1,4 +1,5 @@
 // URL Base de tu backend en InfinityFree
+// Prueba cambiando la URL_BACKEND para que use HTTPS estricto o el archivo directo
 const URL_BACKEND = "https://sistema-citas-api-backend.infinityfreeapp.com/";
 
 // FORMULARIO
