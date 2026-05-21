@@ -144,3 +144,24 @@ async function reprogramar(id){
 
 // INICIO
 cargarCitas();
+
+// Función para traer las citas desde InfinityFree y mostrarlas
+async function cargarCitas() {
+    const urlJson = 'https://sistema-citas-api-backend.infinityfreeapp.com/citas.json';
+
+    try {
+        const respuesta = await fetch(urlJson);
+        const listaDeCitas = await respuesta.json();
+        
+        console.log("Citas traídas del servidor:", listaDeCitas);
+        
+        // Aquí agregas tu lógica de JavaScript para pintar las citas en tu HTML
+        // Ejemplo: el típico bucle forEach para crear elementos en pantalla.
+
+    } catch (error) {
+        console.error("Error al cargar las citas del servidor:", error);
+    }
+}
+
+// Ejecutar la función apenas cargue la página web
+window.addEventListener('DOMContentLoaded', cargarCitas);
