@@ -1,4 +1,4 @@
-// URL Base de tu backend en InfinityFree (Cámbiala si tus archivos PHP se llaman diferente)
+// URL Base de tu backend en InfinityFree
 const URL_BACKEND = "https://sistema-citas-api-backend.infinityfreeapp.com/";
 
 // FORMULARIO
@@ -10,7 +10,7 @@ if (form) {
         e.preventDefault();
 
         const datos = {
-            id: Date.now(), // Generamos un ID único usando la fecha actual para poder editar/borrar después
+            id: Date.now(), // ID único basado en milisegundos para editar/borrar
             nombre: document.getElementById("nombre").value,
             telefono: document.getElementById("telefono").value,
             direccion: document.getElementById("direccion").value,
@@ -36,7 +36,7 @@ if (form) {
             }
 
             form.reset();
-            cargarCitas(); // Recargar la lista automáticamente al guardar
+            cargarCitas(); // Recargar la lista automáticamente
 
         } catch (error) {
             console.error("Error al guardar la cita:", error);
@@ -44,7 +44,7 @@ if (form) {
     });
 }
 
-// LISTAR CITAS (Fusionada y corregida)
+// LISTAR CITAS
 async function cargarCitas() {
     const lista = document.getElementById("listaCitas");
     if (!lista) return;
@@ -96,10 +96,10 @@ async function cancelarCita(id) {
 
 // REPROGRAMAR
 async function reprogramar(id) {
-    const fecha = prompt("Nueva fecha");
-    const hora = prompt("Nueva hora");
+    const fecha = prompt("Nueva fecha:");
+    const hora = prompt("Nueva hora:");
 
-    if (!fecha || !hora) return; // Si cancela el prompt, no hace nada
+    if (!fecha || !hora) return; 
 
     try {
         await fetch(`${URL_BACKEND}editar.php`, {
