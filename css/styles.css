@@ -1,0 +1,142 @@
+/* RESET */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f2f4f8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:20px;
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+
+    background:white;
+
+    width:100%;
+
+    max-width:550px;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+/* TITULO */
+
+h1{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    color:#05386d;
+}
+
+/* FORMULARIO */
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+/* INPUTS */
+
+input,
+select,
+button{
+
+    padding:14px;
+
+    border-radius:8px;
+
+    border:1px solid #ccc;
+
+    font-size:16px;
+}
+
+/* BOTÓN */
+
+button{
+
+    background:#05386d;
+
+    color:white;
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+/* HOVER */
+
+button:hover{
+
+    background:#e6110d;
+}
+
+/* MENSAJE */
+
+#mensaje{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    font-weight:bold;
+}
+
+/* TARJETAS CITAS */
+
+.cita{
+
+    background:#f5f5f5;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-top:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:600px){
+
+    .contenedor{
+
+        padding:20px;
+    }
+
+    h1{
+
+        font-size:24px;
+    }
+}
